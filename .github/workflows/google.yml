@@ -18,7 +18,7 @@ env:
   PROJECT_ID: ${{ secrets.GKE_PROJECT }}
   GKE_CLUSTER: my-first-cluster-1   
   GKE_ZONE: us-central1-c  
-  DEPLOYMENT_NAME: gke-test 
+  DEPLOYMENT_NAME: ts-app
   IMAGE: ts-docker
   TAG: 1.0.0
 
