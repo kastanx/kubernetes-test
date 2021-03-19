@@ -51,7 +51,7 @@ jobs:
         credentials: ${{ secrets.GKE_SA_KEY }}
 
     - name: Build docker image
-      run: docker build --tag "gcr.io/$PROJECT_ID/$IMAGE:$TAG ."
+      run: docker build --tag "gcr.io/$PROJECT_ID/$IMAGE:$TAG" .
 
     - name: Publish
       run: docker push "gcr.io/$PROJECT_ID/$IMAGE:$TAG"
