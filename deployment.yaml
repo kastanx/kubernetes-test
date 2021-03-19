@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: ts-app
+  labels:
+    app: ts-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ts-app
+  template:
+    metadata:
+      labels:
+        app: ts-app
+    spec:
+      containers:
+      - name: ts-app
+        image: gcr.io/PROJECT_ID/IMAGE:TAG
