@@ -1,0 +1,11 @@
+apiVersion: apps/v1
+kind: Service
+metadata:
+  name: ts-app
+spec:
+  selector:
+    app: ts-app
+  type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 9000
