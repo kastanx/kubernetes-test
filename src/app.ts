@@ -4,6 +4,7 @@ const app = express();
 const port = 9000;
 
 app.get("/", (req, res) => {
+  console.log('someone came')
   res.send("Hello World!");
 });
 
