@@ -18,3 +18,4 @@ spec:
       containers:
         - name: ts-app
           image: gcr.io/PROJECT_ID/IMAGE:TAG
+          imagePullPolicy: Always
