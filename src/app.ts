@@ -3,10 +3,11 @@ import express from "express";
 const app = express();
 const port = 9000;
 const date = new Date();
+let counter = 0;
 
 app.get("/", (req, res) => {
-  console.log("someone came");
-  res.send(date);
+  counter += 1;
+  res.send(counter.toString());
 });
 
 app.listen(port, () => {
