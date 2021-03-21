@@ -22,8 +22,8 @@ env:
   IMAGE: ts-docker
 
 jobs:
-  Build:
-    name: Build
+  setup-build-publish-deploy:
+    name: Setup, Build, Publish, and Deploy
     runs-on: ubuntu-latest
 
     steps:
@@ -39,11 +39,6 @@ jobs:
       - name: Run tests
         run: npm run test
 
-  Deploy:
-    name: Deploy
-    runs-on: ubuntu-latest
-
-    steps:
       - name: Setup Google cloud CLI
         uses: google-github-actions/setup-gcloud@v0.2.0
         with:
